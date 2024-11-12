@@ -9,12 +9,10 @@ Key: _ indicates spaces!
 - Answer: ____86      # 4 spaces and 2 characters = 6
 - Answer: 1040        # 4 characters, no spaces
 
-3. 
-
-
 */
 
-/* Write calls of printf that display a float variable x in the following formats
+/*
+2.  Write calls of printf that display a float variable x in the following formats
 a). Exponential notation; left-justified in a field of size 8; one digit after the decimal point.
 
  - Answer: printf("%-8.1e", e);
@@ -23,11 +21,35 @@ b) Exponential notation; right-justified in a field of size 10; six digits after
 
  - Answer: printf("%10.6e", e);
 
-c) Fixed decimal notation; left-justified in a field of size 8; three digits after the decimal point/
+c) Fixed decimal notation; left-justified in a field of size 8; three digits after the decimal point.
  - Answer: printf("%-8.3f", f)
 
-d) Fixed decimal notation: right-justified in a field of size 6; no digits after the decimal point
+d) Fixed decimal notation: right-justified in a field of size 6; no digits after the decimal point.
 - Answer: printf("%6.0f", f)
 
 */
 
+/*
+3. For each of the following pairs of scanf format strings, indicate whether or not the two strings are equivalent. If they're not, show how
+   they can be distinguished.
+   
+   (a)  "%d"    vs.     " %d"  // Answer: They are equivalent because scanf ignores leading whitespace characters when reading input.
+
+   (b) "%d-%d-%d"   vs.     "%d -%d -%d"    // Answer: They are not the same because "%d -%d -%d" expects spaces around the hyphens.
+
+   (c) "%f"    vs.      "%f "   // Answer: They are the same because scanf ignores leading whitespace characters when reading input.
+
+   (d) "%f,%f"  vs.     "%f, %f"    // Answer: They are not the same because "%f,%f" expects the input to have no spaces around the comma,
+                                    // While "%f, %f" does expect the input to have spaces around the comma
+        
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   */
