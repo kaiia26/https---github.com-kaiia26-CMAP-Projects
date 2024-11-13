@@ -41,6 +41,37 @@ d) Fixed decimal notation: right-justified in a field of size 6; no digits after
 
    (d) "%f,%f"  vs.     "%f, %f"    // Answer: They are not the same because "%f,%f" expects the input to have no spaces around the comma,
                                     // While "%f, %f" does expect the input to have spaces around the comma
+
+   
+   /*
+   4. Suppose that we call scanf as follows:
+         scanf("%d%f%d", &i, &x, &j);
+
+         If the user enters
+         10.3  5  6
+
+         what will be the values of i, x, and j after the call? (Assume that x and j are float variables and i is an int variable)
+
+      Conversion specification: %d. scanf reads the characters 10 and . and since integers can't contain a decimal point, 
+      scanf stores 10 into  i and puts the . character back.
+
+      Conversion specification: %f. scanf then reads the characters . and 3. Scanf stores 0.3 into x and puts 5 6 back.
+
+      Conversion specification: %d. scanf then skips any leading whitespace, reads the characters 5 6, and stores 5 as an integer in j.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
    
    
