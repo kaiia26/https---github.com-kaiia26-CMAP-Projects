@@ -58,29 +58,35 @@ d) Fixed decimal notation: right-justified in a field of size 6; no digits after
       Conversion specification: %f. scanf then reads the characters . and 3. Scanf stores 0.3 into x and puts 5 6 back.
 
       Conversion specification: %d. scanf then skips any leading whitespace, reads the characters 5 6, and stores 5 as an integer in j.
+      The remaining input is 6, which isn't read.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    */
+
+  /* 
+  5. Suppose that we call scanf as follows:
+      scanf("%f%d%f", &x, &i, &y);
+
+      If the user enters
+      12.3  45.6  789
+
+      what will be the values of x, i, and y after the call? (Assume that x and y are float variables and i is an int variable)
+
+      Conversion specification: %f. scanf reads the characters 12, . , and 3. Since 12.3 is a floating-point number, it stores it into x.
+
+      Conversion specification: %d. scanf reads the characters 45 and . and since integers can't contain decimal points, scanf stores 45 into
+      i and puts . back.
+
+       Conversion specification: %f. scanf reads the characters . and 6. Since 0.6 is a floating-point number, it stores 0.6 into y.
+       The remaining input is 789, which isn't read.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  */
